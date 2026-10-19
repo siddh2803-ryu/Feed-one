@@ -1,0 +1,21 @@
+# Feed One: Open Questions Register
+
+This register tracks all unresolved questions, their blocking status, and the pragmatic fallbacks used during development per PRD Section 20. Questions that block real-world pilot deployment do not block the hackathon MVP demo.
+
+| ID | Question | Blocking MVP? | Pragmatic Fallback Implemented in MVP | Status |
+|---|---|---|---|---|
+| **Q1** | Hackathon name, deadline, submission format, and judging rubric? | No | Proceed strictly in phased dependency order (P0 through P8), prioritizing demonstrability, truthfulness, and robustness. | Open |
+| **Q2** | Does an existing team repository or stack already exist? | No | Scaffold greenfield stack per D28: Next.js 15 (App Router), TypeScript, Tailwind CSS, shadcn/ui, Supabase Postgres, Drizzle ORM. | Resolved by D28 |
+| **Q3** | TinyFish credentials, rate limits, Search schema details, and terms of service? | Only for live discovery | Default to `DISCOVERY_PROVIDER="mock"` with verified fixtures for deterministic evaluation. If `TINYFISH_API_KEY` is provided, invoke live Search/Fetch with internal caps (50 searches/day, 100 fetches/day) and 2,000-char excerpt limits. | Open |
+| **Q4** | Target pilot region coordinates and timezone? | No | Parameterized via environment variables: `REGION_TIMEZONE="Asia/Kolkata"`, `REGION_CENTER_LAT=12.9716`, `REGION_CENTER_LNG=77.5946`. Seed entities positioned via geometric km offsets. | Resolved by D21 |
+| **Q5** | Who reviews and certifies the food safety rule table, and which local food handling regulations apply? | Blocks pilot, not MVP | Implement conservative starter rules (S1–S8); prominent UI notice: *"Food safety screening operates under conservative routing rules pending review by a qualified food-safety professional. The platform does not certify food safety."* | Open |
+| **Q6** | Data retention, backup schedule, and right-to-be-forgotten deletion rules? | Blocks pilot, not MVP | Provide on-demand demo reset (`POST /api/demo/reset`); retain lifecycle events and match runs permanently for audit; truncate source excerpts after 180 days; purge notifications after 90 days. | Open |
+| **Q7** | Is there an approved methodology for calculating "estimated waste avoided", CO2 impact, or meals served? | No | Completely omit fabricated environmental metrics and meal estimates. Display only factual counts: donations listed, donations delivered, and net redistributed quantity (items and kg separately). | Resolved by BR-MET |
+| **Q8** | Which LLM provider (OpenAI, Anthropic, Gemini) and model should be used? | No | Keep LLM flags disabled by default (`LLM_EXPLANATIONS=false`, `LLM_EXTRACTION=false`). Use 100% deterministic template explanations and deterministic regex extractors. | Open |
+| **Q9** | Production KYC verification, organisation approval workflows, and auth providers? | Blocks pilot, not MVP | Seeded demo accounts with visible top-bar role switcher and one-click demo persona login. Public self-registration disabled in MVP. | Resolved by D11 |
+| **Q10** | Error tracking and observability infrastructure (e.g. Sentry, Datadog)? | No | Structured JSON console logging with secret/PII redaction and `/api/health` monitoring endpoint. | Resolved |
+| **Q11** | Production hosting target, cloud database region, and custom domain? | No | Standard Vercel deployment connected to Supabase Postgres. | Open |
+| **Q12** | Legal liability and indemnification terms for spoiled food or missed collections? | Blocks pilot, not MVP | Explicit recipient attestation at collection handoff: *"Check food upon collection. You can refuse at handoff."* Append-only lifecycle event trail. | Open |
+| **Q13** | Pilot phase target KPIs and success criteria? | Blocks pilot, not MVP | Excluded from MVP; track operational metrics: Time to Confirmed Match, Delivery Completion Rate, Expiry Rate. | Open |
+| **Q14** | Multilingual support and low-bandwidth/offline operational requirements? | No | English-only UI; responsive mobile layouts; UI strings isolated in constants dictionary for future localization. | Open |
+| **Q15** | How should partial collection or multi-recipient donation splitting be represented? | No | Excluded from MVP per D1. One recipient must accept the full quantity. Splitting is a post-MVP roadmap item. | Resolved by D1 |
