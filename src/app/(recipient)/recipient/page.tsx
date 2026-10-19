@@ -101,7 +101,7 @@ export default function RecipientDashboardPage() {
                     <span className="text-sm font-bold text-foreground">
                       {offer.donation?.quantity} {offer.donation?.unitLabel ?? offer.donation?.unit} of {offer.donation?.title}
                     </span>
-                    <span className="text-[11px] font-semibold text-brand bg-brand-subtle px-2 py-0.5 rounded-full">
+                    <span className="text-[11px] font-semibold text-brand bg-brand-subtle px-2 py-0.5 rounded-md border border-brand/20">
                       New Offer
                     </span>
                   </div>

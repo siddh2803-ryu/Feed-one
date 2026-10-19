@@ -50,7 +50,7 @@ export function PickupCard({
             {isDelivered
               ? "Rescue Completed & Delivered"
               : isCollected
-              ? "Collected — In Transit"
+              ? "Collected: In Transit"
               : "Handoff Confirmed"}
           </span>
         </div>

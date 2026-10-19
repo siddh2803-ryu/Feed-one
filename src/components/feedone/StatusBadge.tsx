@@ -1,7 +1,7 @@
 import React from "react";
 import {
   FileText,
-  Sparkles,
+  Target,
   SearchX,
   Hourglass,
   Handshake,
@@ -45,7 +45,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "listed":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-neutral-subtle text-neutral ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-neutral-subtle text-neutral ${padding}`}
         >
           <FileText className={iconSize} />
           <span>Listed</span>
@@ -55,7 +55,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "matching":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-info-subtle text-info ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-info-subtle text-info ${padding}`}
         >
           <Loader2 className={`${iconSize} animate-spin`} />
           <span>Checking recipients</span>
@@ -65,9 +65,9 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "match_recommended":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-brand-subtle text-brand ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-brand-subtle text-brand ${padding}`}
         >
-          <Sparkles className={iconSize} />
+          <Target className={iconSize} />
           <span>Match recommended</span>
         </span>
       );
@@ -75,7 +75,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "no_match":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-warning-subtle text-warning ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-warning-subtle text-warning ${padding}`}
         >
           <SearchX className={iconSize} />
           <span>No suitable match</span>
@@ -85,7 +85,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "awaiting_confirmation":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-info-subtle text-info ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-info-subtle text-info ${padding}`}
         >
           <Hourglass className={iconSize} />
           <span>Awaiting confirmation</span>
@@ -95,7 +95,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "confirmed":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-brand-subtle text-brand ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-brand-subtle text-brand ${padding}`}
         >
           <Handshake className={iconSize} />
           <span>Confirmed</span>
@@ -105,7 +105,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "collected":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-success-subtle text-success ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-success-subtle text-success ${padding}`}
         >
           <PackageCheck className={iconSize} />
           <span>Collected</span>
@@ -115,7 +115,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "delivered":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-success-subtle text-success ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-success-subtle text-success ${padding}`}
         >
           <CheckCircle2 className={iconSize} />
           <span>Delivered</span>
@@ -125,7 +125,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "pickup_expired":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-danger-subtle text-danger ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-danger-subtle text-danger ${padding}`}
         >
           <AlertCircle className={iconSize} />
           <span>Pickup expired</span>
@@ -135,7 +135,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "cancelled":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-neutral-subtle text-neutral ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-neutral-subtle text-neutral ${padding}`}
         >
           <Slash className={iconSize} />
           <span>Cancelled</span>
@@ -146,7 +146,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "eligible_by_rules":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-success-subtle text-success ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-success-subtle text-success ${padding}`}
         >
           <ShieldCheck className={iconSize} />
           <span>Eligible under configured rules</span>
@@ -156,7 +156,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "eligible_by_review":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-success-subtle text-success ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-success-subtle text-success ${padding}`}
         >
           <UserCheck className={iconSize} />
           <span>Approved by coordinator review</span>
@@ -166,7 +166,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "needs_review":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-warning-subtle text-warning ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-warning-subtle text-warning ${padding}`}
         >
           <ShieldAlert className={iconSize} />
           <span>Needs coordinator review</span>
@@ -176,7 +176,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     case "blocked":
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-danger-subtle text-danger ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-danger-subtle text-danger ${padding}`}
         >
           <ShieldX className={iconSize} />
           <span>Blocked by rule</span>
@@ -186,7 +186,7 @@ export function StatusBadge({ status, size = "md" }: StatusBadgeProps) {
     default:
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-full bg-surface-muted text-foreground-muted ${padding}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md border border-current/15 bg-surface-muted text-foreground-muted ${padding}`}
         >
           <span>{status}</span>
         </span>

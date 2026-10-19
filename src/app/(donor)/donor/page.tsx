@@ -49,7 +49,7 @@ export default function DonorDashboardPage() {
         </div>
       ) : donations.length === 0 ? (
         <div className="bg-surface rounded-2xl border border-dashed border-border p-12 text-center space-y-3">
-          <div className="w-12 h-12 rounded-full bg-surface-muted flex items-center justify-center text-foreground-muted mx-auto">
+          <div className="w-12 h-12 rounded-xl bg-surface-muted flex items-center justify-center text-foreground-muted mx-auto border border-border">
             <Package className="w-6 h-6" />
           </div>
           <h3 className="text-sm font-bold text-foreground">No active donations</h3>

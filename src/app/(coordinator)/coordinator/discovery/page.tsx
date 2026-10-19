@@ -114,7 +114,7 @@ export default function DiscoveryConsolePage() {
           </p>
         </div>
 
-        <div className="text-xs text-demo font-semibold bg-demo-subtle px-3 py-1 rounded-full border border-demo">
+        <div className="text-xs text-demo font-semibold bg-demo-subtle px-3 py-1 rounded-md border border-demo">
           Provider: {process.env.DISCOVERY_PROVIDER || "mock"} (Simulated Offline Fixtures)
         </div>
       </div>
@@ -196,7 +196,7 @@ export default function DiscoveryConsolePage() {
             )}
 
             {activeRun.status === "completed" && (
-              <span className="inline-flex items-center gap-1 text-xs font-semibold text-success bg-success-subtle px-2.5 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1 text-xs font-semibold text-success bg-success-subtle px-2.5 py-1 rounded-md border border-success/20">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Fetched {activeRun.counts.fetched} Leads Added to Directory</span>
               </span>

@@ -22,7 +22,7 @@ export function MetricTile({
         <span className="text-xs font-semibold text-foreground-muted uppercase tracking-wider">
           {label}
         </span>
-        <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-surface-muted text-foreground-muted border border-border">
+        <span className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-surface-muted text-foreground-muted border border-border">
           {scopeLabel}
         </span>
       </div>

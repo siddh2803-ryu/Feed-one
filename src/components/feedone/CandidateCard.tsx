@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, MapPin, Clock, Package, HelpCircle, Send } from "lucide-react";
+import { CheckCircle2, MapPin, Clock, Package, HelpCircle, Send } from "lucide-react";
 import { CandidateEvaluation, DonationSnapshot } from "@/domain/matching/types";
 import { ExplanationSheet } from "./ExplanationSheet";
 
@@ -41,19 +41,19 @@ export function CandidateCard({
                 {candidate.recipientName}
               </h4>
               {isRecommended && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-brand bg-brand-subtle px-2 py-0.5 rounded-full">
-                  <Sparkles className="w-3 h-3" />
+                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-brand bg-brand-subtle px-2 py-0.5 rounded-md border border-brand/20">
+                  <CheckCircle2 className="w-3 h-3" />
                   Recommended
                 </span>
               )}
               {candidate.group === "needs_confirmation" && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-medium text-warning bg-warning-subtle px-2 py-0.5 rounded-full">
+                <span className="inline-flex items-center gap-1 text-[11px] font-medium text-warning bg-warning-subtle px-2 py-0.5 rounded-md border border-warning/20">
                   <HelpCircle className="w-3 h-3" />
                   Needs confirmation
                 </span>
               )}
               {candidate.group === "excluded" && (
-                <span className="text-[11px] font-medium text-danger bg-danger-subtle px-2 py-0.5 rounded-full">
+                <span className="text-[11px] font-medium text-danger bg-danger-subtle px-2 py-0.5 rounded-md border border-danger/20">
                   Not suitable
                 </span>
               )}

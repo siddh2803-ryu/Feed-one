@@ -6,7 +6,7 @@ import Link from "next/link";
 import {
   ArrowLeft,
   RotateCcw,
-  Sparkles,
+  CheckCircle2,
   HelpCircle,
   XCircle,
   AlertTriangle,
@@ -203,7 +203,7 @@ export default function DonationDetailPage() {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <h3 className="text-xs font-bold text-brand uppercase tracking-wider flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <CheckCircle2 className="w-3.5 h-3.5" />
                   Eligible Candidates ({eligibleCandidates.length})
                 </h3>
               </div>

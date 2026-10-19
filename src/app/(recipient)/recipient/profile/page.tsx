@@ -109,7 +109,7 @@ export default function RecipientProfilePage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs text-brand bg-brand-subtle px-2.5 py-1 rounded-full font-semibold">
+        <div className="flex items-center gap-1.5 text-xs text-brand bg-brand-subtle px-2.5 py-1 rounded-md border border-brand/20 font-semibold">
           <User className="w-3.5 h-3.5" />
           <span>{recipient.name}</span>
         </div>

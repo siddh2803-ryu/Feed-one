@@ -225,7 +225,7 @@ export default function CoordinatorOperationsPage() {
             Rules & Configuration
           </span>
           <p className="text-[11px] text-foreground-muted">
-            Inspect active starter safety rules S1–S8 and operational thresholds.
+            Inspect active starter safety rules S1 to S8 and operational thresholds.
           </p>
         </Link>
       </div>

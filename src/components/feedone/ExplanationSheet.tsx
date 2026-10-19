@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { X, Sparkles, HelpCircle, AlertOctagon, Info } from "lucide-react";
+import { X, CheckCircle2, HelpCircle, AlertOctagon, Info } from "lucide-react";
 import { CandidateEvaluation, DonationSnapshot } from "@/domain/matching/types";
 import { ConstraintRow } from "./ConstraintRow";
 import { generateConstraintSummary } from "@/domain/matching/explanations";
@@ -49,8 +49,8 @@ export function ExplanationSheet({
                 Recommendation Explanation
               </h2>
               {candidate.group === "eligible" && candidate.rank === 1 && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-brand bg-brand-subtle px-2 py-0.5 rounded-full">
-                  <Sparkles className="w-3 h-3" />
+                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-brand bg-brand-subtle px-2 py-0.5 rounded-md border border-brand/20">
+                  <CheckCircle2 className="w-3 h-3" />
                   Recommended
                 </span>
               )}
@@ -84,7 +84,7 @@ export function ExplanationSheet({
           {/* 2. Hard Constraints Checklist (Ref §8.2.1) */}
           <div>
             <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">
-              Hard Operational Constraints (C1 – C6)
+              Hard Operational Constraints (C1 to C6)
             </h3>
             <div className="bg-surface rounded-lg border border-border px-3">
               {candidate.constraints.map((c) => (

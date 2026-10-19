@@ -123,7 +123,7 @@ export default function CoordinatorSettingsPage() {
                   <td className="px-4 py-3 font-mono text-[11px] text-foreground">{r.condition}</td>
                   <td className="px-4 py-3">
                     <span
-                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase ${
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-md border border-current/15 uppercase ${
                         r.outcome === "eligible_by_rules"
                           ? "bg-success-subtle text-success"
                           : r.outcome === "blocked"

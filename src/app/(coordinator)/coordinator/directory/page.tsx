@@ -102,12 +102,12 @@ export default function DirectoryPage() {
 
                   <td className="px-4 py-3">
                     {r.recordType === "seeded_demo" ? (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-demo bg-demo-subtle px-2 py-0.5 rounded-full">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-demo bg-demo-subtle px-2 py-0.5 rounded-md border border-demo/30">
                         <Database className="w-3 h-3" />
                         Demo Seeded
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-accent bg-accent-subtle px-2 py-0.5 rounded-full">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-accent bg-accent-subtle px-2 py-0.5 rounded-md border border-accent/30">
                         <Globe className="w-3 h-3" />
                         Public Lead
                       </span>
