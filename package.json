@@ -1,6 +1,6 @@
 {
   "name": "feed-one",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,7 +12,8 @@
     "test:coverage": "vitest run --coverage",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:seed": "node --loader ts-node/esm supabase/seed/seed.ts"
+    "db:seed": "node --loader ts-node/esm supabase/seed/seed.ts",
+    "roadmap": "node scripts/roadmap.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
