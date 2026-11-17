@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: Feed One Dispatch & Matching API
+  description: API for deterministic constraint-based surplus food rescue coordination.
+  version: 1.0.0
+servers:
+  - url: https://feedone.org/api
+paths:
+  /donations:
+    post:
+      summary: List new surplus donation
+      responses:
+        '201':
+          description: Donation listing created and matched.
+  /offers:
+    get:
+      summary: List candidate offers
+      responses:
+        '200':
+          description: List of active and past offers.
+  /metrics:
+    get:
+      summary: Factual impact metrics
+      responses:
+        '200':
+          description: Honest tallies of rescued items and kilograms.
